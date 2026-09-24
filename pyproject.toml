@@ -3,8 +3,16 @@ name = "deck-builder"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+license = "AGPL-3.0-or-later"
+authors = [
+    { name = "Kirill Ignatyev", email = "might.rubbles42@icloud.com" }
+]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastexcel[polars]>=0.21.0",
+    "polars>=1.42.1",
+    "python-pptx>=1.0.2",
+]
 
 [project.scripts]
 deck-builder = "deck_builder:main"
@@ -20,3 +28,11 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.15.20",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
+skips = ["B101"]
