@@ -1,9 +1,10 @@
 [project]
 name = "deck-builder"
 version = "0.1.0"
-description = "Add your description here"
+description = "Generate PowerPoint book digests from Excel data."
 readme = "README.md"
-license = "AGPL-3.0-or-later"
+license = "PolyForm-Noncommercial-1.0.0"
+license-files = ["LICENSE"]
 authors = [
     { name = "Kirill Ignatyev", email = "might.rubbles42@icloud.com" }
 ]
@@ -13,10 +14,11 @@ dependencies = [
     "pillow>=12.3.0",
     "polars>=1.42.1",
     "python-pptx>=1.0.2",
+    "typer>=0.27.2",
 ]
 
 [project.scripts]
-deck-builder = "deck_builder:main"
+deck-builder = "deck_builder.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.11.24,<0.12.0"]
