@@ -10,6 +10,7 @@ authors = [
 requires-python = ">=3.14"
 dependencies = [
     "fastexcel[polars]>=0.21.0",
+    "pillow>=12.3.0",
     "polars>=1.42.1",
     "python-pptx>=1.0.2",
 ]
@@ -25,6 +26,7 @@ build-backend = "uv_build"
 dev = [
     "bandit>=1.9.4",
     "basedpyright>=1.39.8",
+    "pyclean>=3.7.0",
     "pytest>=9.1.1",
     "ruff>=0.15.20",
 ]
